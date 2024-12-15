@@ -294,7 +294,7 @@ Before setting up the project, make sure you have the following installed on you
 ### **Step 1: Clone the Repository**
 
 # Clone the repository
-git clone https://github.com/yourusername/Serenify-Version-1.0.git
+git clone https://github.com/yourusername/Serenify-Version-1.0.0.git
 
 
 
