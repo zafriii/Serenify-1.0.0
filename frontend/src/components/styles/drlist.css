@@ -1,0 +1,140 @@
+.dr-list-container{
+    display: flex;   
+}
+
+
+.dr-list-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+
+
+.dr-list-texts input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 34px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.dr-list-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dr-list-card-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dr-list-card-container li {
+    margin-bottom: 10px;
+}
+
+.dr-list-card-container li a {
+    text-decoration: none;
+    color: #011a07;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dr-list-card-container li a:hover {
+    background-color: #e6f2ff;
+}
+
+
+.dr-list-card{
+    background-color: aliceblue;
+    margin-top: 20px;
+    height: 330px;
+    width: 250px;
+}
+
+
+/* .dr-list{
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+    gap: 20px;
+} */
+
+
+.dr-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+  .dr-list-card {
+    border: 1px solid #ccc; /* Optional styling */
+    padding: 15px; /* Optional styling */
+    border-radius: 8px; /* Optional styling */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 70px;
+  }
+
+  .dr-list-card:hover{
+    border:1px solid #234E52;
+  }
+
+  .dr-list-card strong{
+    margin-top: 50px;
+    color: #234E52;
+  }
+
+  .dr-list-card .dr-specialty{
+    margin-top: 10px;
+  }
+
+  .dr-fee , .dr-time{
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  
+  .dr-list-card .dr-time{
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .dr-list-card button{
+    margin-top: 20px;
+    background-color:#234E52 ;
+    border: #f0e9e9;
+    color: white;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+@media(max-width:600px){
+
+    .dr-list-container{
+        flex-direction: column;  
+    }
+    
+    .dr-list-texts input[type="text"] {
+        width: 70%;
+    }
+
+    .dr-list-card {
+        margin-left: 20px;
+    }
+}

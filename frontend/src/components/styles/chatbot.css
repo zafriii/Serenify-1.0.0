@@ -1,0 +1,606 @@
+.chatbot p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #234E52;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 50px;
+    
+}
+
+.chatbot .emobot{
+    color: #234E52;
+    font-weight: 600;
+    margin-right: 10px;
+}
+ 
+ .chatbot-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgb(230, 212, 212);
+    background-color: transparent;
+  }
+  
+  .chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .message.user {
+    background-color:  #96b6b9;
+    color: black;
+    align-self: flex-end;
+    width: 85%;
+    margin-left: 5%;
+  }
+  
+  .message.bot {
+    background-color:   rgba(180, 168, 168, 0.74);;
+    align-self: flex-start;
+    width: 85%;
+    margin-left: 5%;
+    
+  }
+  
+  .chat-input {
+    display: flex;
+    margin-top: 10px;  
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color:rgb(222, 234, 235);
+    border-radius: 5px;
+    margin-left: 5%;
+    outline: none;
+   
+  }
+  
+  .chat-input button {
+    padding: 10px;
+    background-color: #234E52;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .chat-input button:hover{
+    background-color: #2f5d5f;
+   
+  }
+   
+
+  .chat-input .mic-button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+
+  .chatbot-container .select{
+    margin-left: 95px;
+   }
+  
+   .mood-tracker .tracker{
+    margin: 5px;
+    padding: 10px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    background-color: #234E52;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+   }
+
+   .mood-tracker .tracker a{
+    text-decoration: none;
+   }
+
+   .tracker-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+   }
+
+   .mood-tracker .tracker:hover {
+    background-color: #2e5a5e; 
+    color: #ffffff; 
+  }
+
+  .mood-buttons {
+    margin-bottom: 20px;
+    margin-left: 6%;
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .mood-buttons button {
+    margin: 5px;
+    padding: 10px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    background-color: #234E52;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+    
+
+  .bot-profile-pic {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; 
+    margin-right: 10px; 
+  }
+  
+  .message {
+    display: flex;
+    align-items: center; 
+    margin: 10px 0; 
+  }
+  
+  .message .tts-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+
+
+  .message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    white-space: normal;
+    
+}
+
+.message.user {
+    background-color: #96b6b9;
+    color: black;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: left;
+    min-width: 100px;
+}
+
+.message.bot {
+    background-color: rgba(180, 168, 168, 0.74);
+    color: black;
+    align-self: flex-start;
+    margin-right: auto;
+    text-align: left;
+    min-width: 100px;
+}
+
+
+
+.dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+  .dark .chat-input input{
+    background-color: #332f2f;
+    color: #ddd;
+  }
+
+
+  .toggle-container {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .toggle-switch {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-switch.light {
+    background-color: #ccc;
+  }
+  
+  .toggle-switch.dark {
+    background-color: rgb(126, 116, 116);
+  }
+  
+  .toggle-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+    left: 3px; 
+  }
+  
+  .toggle-switch.dark .toggle-circle {
+    left: 25px; 
+  }
+
+  .send-button.disabled {
+    background-color: #5c645d; 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+  }
+  
+  .send-button:disabled {
+    pointer-events: none; 
+  }
+
+
+  .mood-tracker{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 450px;
+  }
+
+
+  .mood-tracker p{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 30px;
+  }
+
+  .mood-percentage-container {
+    margin-top: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  
+  .mood-percentage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .progress-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 20px;
+    border: 2px solid #022418 #5fd3dd ;
+    box-shadow: 0 0 5px #25595e, 0 0 10px #5fd3dd, 0 0 20px #151f20;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    clip-path: circle(50%);
+    transition: background 0.5s ease;
+    
+
+  }
+  
+  .mood-percentage-container .mood-label {   
+    margin-top: 20px;
+  }
+
+ 
+  .progress-circle {
+    position: relative;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;    
+    overflow: hidden; 
+    
+  }
+  
+  .progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+  }
+  
+  .progress i {
+    position: absolute;
+    font-size: 20px; 
+    color: #1e6369; 
+  }
+  
+  .mood-percentage {
+    display: flex;        
+    flex-direction: column; 
+    align-items: center;  
+    margin: 10px;        
+    width: calc(33.33% - 20px); 
+  }
+  
+  .progress-circle {
+    position: relative;    
+    width: 70px;          
+    height: 70px;         
+  }
+  
+  .progress {
+    border-radius: 50%;    
+    width: 100%;          
+    height: 100%;         
+    display: flex;        
+    justify-content: center; 
+    align-items: center;  
+  }
+  
+  .mood-icon {
+    position: absolute;   
+    color: white;         
+    font-size: 24px;    
+  }
+  
+  .loading{
+    margin-left: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: loading 0.6s infinite alternate;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes loading {
+    from {
+      opacity: 0.2;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+
+
+
+  .progress-load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+    .progress-bar-container {
+     
+      width: 55%;
+      background-color: #add3d8;
+      padding: 10px 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #25595e, 0 0 10px #5fd3dd, 0 0 20px #151f20;
+    }
+
+    .progress-bar-container p{
+      font-size: 18px;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #6d8283;
+      box-shadow: 0 0 5px #25595e, 0 0 10px #5fd3dd, 0 0 20px #151f20;
+      border-radius: 12px;
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #0b3336; 
+      transition: width 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .progress-text {
+      color: #0b3336;
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+  @media(max-width:1920px){
+    .chatbot-container .select{
+      margin-left: 115px;
+     }
+  }
+
+  @media(max-width:1440px){
+    .chatbot-container .select{
+      margin-left: 95px;
+     }
+  }
+
+
+  @media(max-width:900px){
+
+    .mood-percentage-container {
+      display: flex;         
+      flex-wrap: wrap;     
+      justify-content: space-around;
+     
+    }
+
+    .chatbot-container .select{
+      margin-left: 20px;
+     }
+    
+
+    .mood-buttons button{
+      width: 120px;
+      margin-left: 20px;
+    }
+
+    .toggle-container{
+      margin-left: 20px;
+    }
+
+    .loading{
+      margin-left: 10px;
+    }
+  }
+
+
+  @media(max-width:768px){
+
+    .chatbot p{
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .chatbot-container p{
+      font-size: 14px;
+    }
+
+    
+    .mood-buttons {
+      margin-bottom: 20px;
+      margin-left: 1%;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 35% 35% 30%;
+    }
+
+
+    .mood-buttons button{
+      width: 120px;
+      margin-left: 20px;
+    }
+
+    .toggle-container{
+      margin-left: 20px;
+    }
+
+    .mood-percentage-container {
+      display: flex;         
+      flex-wrap: wrap;     
+      justify-content: space-around;
+     
+    }
+
+    .progress-bar-container{
+      margin-top: 40px;
+    }
+
+    .loading{
+      margin-left: 10px;
+    }
+  }
+
+
+@media(max-width:440px){
+  .chatbot p{
+    font-size: 11px;
+  }
+
+  .chatbot-container p{
+    font-size: 12px;
+  }
+
+  .mood-buttons button{
+    width: 80px;
+    margin-left: -6px;
+    font-size: 10px;
+  }
+
+  .chat-input input{
+   margin-left: 1%;
+  }
+
+  .mood-tracker p{
+    font-size: 14px;
+  }
+
+  .progress-bar-container{
+    margin-top: 80px;
+  }
+
+  .chatbot-container .select{
+    margin-left: 20px;
+  }
+
+  .loading{
+    margin-left: 10px;
+  }
+
+}

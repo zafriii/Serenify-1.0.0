@@ -1,0 +1,67 @@
+/* Basic styling for the Google Translate dropdown */
+.goog-te-combo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: border-color 0.3s, background-color 0.3s;
+    outline: none;
+    width: 70px;
+  }
+  
+  .goog-te-combo:focus {
+    border-color: #3bf689; /* Highlight border on focus */
+    background-color: #e6f1ff;
+  }
+  
+  /* Dropdown arrow */
+  .goog-te-combo option {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .goog-te-combo option:hover {
+    background-color: #e0e0e0; /* Highlight option on hover */
+  }
+  
+  /* Dropdown container (adding some spacing and positioning) */
+  .goog-te-banner-frame {
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Styling for the dropdown container */
+  .goog-te-gadget {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Adding a little shadow effect to the translate widget */
+  .goog-te-gadget-simple {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom styles for the widget container */
+  .goog-te-gadget-icon {
+    display: none;
+  }
+  
+  /* Add some space around the translator widget */
+  #google_translate_element {
+    margin-top: 20px;
+  }
+  
+  /* Style for the translate button container */
+  .goog-te-banner-frame {
+    margin-top: 20px;
+  }
+  

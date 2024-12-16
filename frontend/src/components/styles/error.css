@@ -1,0 +1,11 @@
+.error h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 5vw;
+    line-height: 8vw;
+    color: gray;
+}
+
+

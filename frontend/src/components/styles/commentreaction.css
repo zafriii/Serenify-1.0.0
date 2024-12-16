@@ -1,0 +1,29 @@
+.cmnt-reaction-button button{
+    /* background-color: transparent; */
+    background-color: rgb(223, 232, 240);
+    outline: none;
+    border: none;
+    font-size: 13px;
+    padding: 2px 4px;
+    margin-top: 5px;
+    border-radius:30px ;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.cmnt-reaction-button button:hover{
+    background-color: rgb(212, 204, 204);
+    transform: translate(4px);
+}
+
+.cmnt-reaction-button button:active {
+    transform: translate(8px); 
+}
+
+.cmnt-reaction-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

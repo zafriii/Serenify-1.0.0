@@ -1,0 +1,61 @@
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .circle-progress {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .circular-chart .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circular-chart .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke: #234E52;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  .circular-chart .percentage {
+    fill: #234E52;
+    font-family: Arial, sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+
+  .progress-text{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .progress-text h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .progress-text p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  @keyframes progress {
+    from {
+      stroke-dasharray: 0 100;
+    }
+  }
+  

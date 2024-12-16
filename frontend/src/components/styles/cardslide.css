@@ -1,0 +1,107 @@
+.cardslide-wrapper {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.cardslide-container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.cardslide-container .card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.cardslide-container .card:hover{
+    opacity: 0.9;
+}
+
+.cardslide-container .card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cardslide-container .card > .row > .no {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.cardslide-container .card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.cardslide-container .description p {
+    color: white;
+    padding-top: 5px;
+}
+
+.cardslide-container .description h4 {
+    text-transform: uppercase;
+}
+
+.cardslide-container input {
+    display: none;
+}
+
+.cardslide-container input:checked + label {
+    width: 600px;
+}
+
+.cardslide-container input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.cardslide-container .card[for="c1"] {
+    background-image: url('https://theswissquality.ch/wp-content/uploads/2020/03/young-man-traveling-with-backpack-hiking-in-mountains.jpg');
+}
+.cardslide-container .card[for="c2"] {
+    background-image: url('https://voxpopmarketing.com/wp-content/uploads/2019/06/AdobeStock_230366692.jpeg');
+}
+.cardslide-container .card[for="c3"] {
+    background-image: url('https://www.wallpaperflare.com/static/9/77/297/women-sports-running-fitness-model-wallpaper.jpg');
+}
+.cardslide-container .card[for="c4"] {
+    background-image: url('http://hdqwalls.com/wallpapers/women-beach-sand-walking-red-dress-80.jpg');
+}
+
+
+
+@media(max-width:900px){
+    .cardslide-wrapper {
+        display: none;
+    }
+   
+}

@@ -1,0 +1,195 @@
+.analysis-container {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #f4f6f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.analysis-header{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+   
+}
+
+.analysis-container .username {
+    margin-left: 5px;
+}
+
+.analysis-container .day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.analysis-container .day-no{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #2d6b74;
+    font-weight: bolder;
+}
+
+.analysis-container .mood-buttons {
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.analysis-container .mood-button {
+    background-color: #234E52;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mood-button:hover {
+    background-color: #2d6b74; 
+    opacity: 0.9;
+}
+
+.mood-button:active {
+    transform: scale(0.98); 
+}
+
+.mood-button:focus {
+    outline: none;
+    border: 2px solid #639397; 
+}
+
+.loading-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3498db; 
+    font-weight: bold;
+}
+
+.analysis-section {
+    text-align: center;
+}
+
+.analysis-title {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.status {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.no-data-message {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    text-align: center;
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 12px; 
+    padding: 30px;
+    border: 1px solid #ecf0f1; 
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+
+
+.pie-chart-container {
+    width: 450px;  
+    height: 450px; 
+    margin-left: 140px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .title, .analysis-title, .status, .loading-message {
+        font-size: 1.2rem;
+    }
+
+    .mood-button {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    .chart-container {
+        padding: 20px; 
+        border-radius: 10px; 
+    }
+
+    .mood-buttons {
+        gap: 12px; 
+    }
+
+
+    .pie-chart-container {
+        width: 350px;  
+        height: 350px; 
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+
+    .analysis-container .day{
+        font-size: 18px;
+        margin-left: 40px;
+    }
+}
+
+
+@media (max-width:440px) {
+
+    .analysis-container {
+       width: 90%;
+    }
+
+
+    .pie-chart-container {
+        width: 300px;  /* Adjust width as needed */
+        height: 300px; /* Adjust height as needed */
+        margin-left: -20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    
+
+    
+}

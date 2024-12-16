@@ -1,0 +1,136 @@
+.single-post {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+  .post-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .single-post textarea{
+   height: 280px;
+  }
+
+  .single-post p{
+    margin-top: 20px;
+  }
+
+
+  .single-post .more-options-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    /* position: absolute;
+    top: 10px;
+    right: 10px; */
+    cursor: pointer;
+    color: #333;
+  }
+  
+  
+  .single-options-dropdown {
+    /* position: absolute;
+    top: 35px;
+    right: 10px; */
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 270px;
+    right: 190px;
+    z-index: 10;
+  }
+  
+  
+  .single-options-dropdown button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .single-options-dropdown button:hover {
+    background-color: #f0f0f0;
+  }
+
+
+  .single-post .save-btn,
+  .single-post .cancel-btn{
+    background-color: #376979;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .single-post .save-btn:hover, .single-post .cancel-btn:hover {
+    background-color: #376979;
+  }
+  
+  .cmnt-react{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  @media(max-width:1920px){
+    
+    .single-options-dropdown { 
+      top: 270px;
+      right: 460px;
+    }
+  }
+
+
+  @media(max-width:1400px){
+    
+    .single-options-dropdown { 
+      top: 270px;
+      right: 190px;
+    }
+  }
+
+
+  @media(max-width:600px){
+    
+    .single-post{
+      margin-left: 13px;
+      width: 90%;
+    }
+
+    .single-options-dropdown {
+    
+      top: 270px;
+      right: 30px;
+
+    }
+  }

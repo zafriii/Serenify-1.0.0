@@ -1,0 +1,845 @@
+#main {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#center {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 2.5vw;
+   
+}
+
+#left{
+    display: flex;   
+}
+
+#left img{
+    width: 95%;
+}
+
+#left button{
+    height: 40px;
+    width: 200px;
+    margin-top: 350px;
+    margin-left: -100px;
+    background: linear-gradient(to top right, #0b1b1d, #46696e);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#left button:hover{
+    transform: scale(1.1);
+}
+
+#left button {
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #234E52;
+    color: #b2cdcf;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+    text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+      calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+  }
+  
+  #left button:hover,
+  #left button:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+  }
+  
+  #left button:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+  }
+  
+  #left button {
+    font-weight: bold;    
+    margin-top: 350px;
+    margin-left: -100px;
+    cursor: pointer;
+    padding: .1em .3em;
+  }
+
+
+  #right h1{    
+    color: #234E52;
+    font-size: 10vw;   
+    line-height: 8vw;
+    margin-top: -80px;
+  }
+
+
+#right h2{    
+    color: #234E52;
+    font-size: 6vw;
+    line-height: 5vw;
+}
+
+
+.mental-wealth-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to top right, #0b1b1d, #46696e, gray);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-icon {
+    font-size: 30px;
+    color: #46696e;
+}
+
+
+.text-container h2 {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.text-container p {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin: 20px;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-button {
+    background-color: #46696e;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 30px;
+    margin-right: 40px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+    opacity: 0.8;
+}
+
+.arrow-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.image-card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+    margin-left: 20px;
+    
+  }
+ 
+  .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    z-index: 1;
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+  }
+  
+  
+  .card-description {
+    font-size: 14px;
+    margin: 5px 0 0;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+
+.card-content button{
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    color: white;
+}
+
+.bottom-part2 .image-card{
+    width: 600px;
+    height: 400px;
+}
+
+.bottom-part2 .image-card .card-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-part2 .image-card .card-content p{
+    margin-top: 10px;
+}
+
+.page2-bottom-texts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.page2-bottom-texts .big-text{
+    font-size: 34px;
+}
+
+.page2-bottom-texts .small-text{
+    margin-top: 20px;
+}
+
+
+.page2-cards{
+    display: flex;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.page2-card{
+    width: 200px;
+    height: 130px;
+    color: white;
+    font-size: 13px;
+    background-color: #498185;
+    margin-left: 20px;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+.page2-card p{
+    margin-top: 10px;
+}
+
+
+#page2 {
+    width: 100%;
+    margin-top: 100px;  
+}
+
+
+
+.page-2-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+    padding: 50px 0;
+  }
+
+
+  .page-2-item {
+    
+    height: 140px;
+    width: 180px;
+    overflow: hidden;
+    border-radius: 28px;
+    margin-left: 10px;
+  }
+
+
+  .page-2-item-link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #8faeb1;
+    overflow: hidden;  
+    position: relative;
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .page-2-item-link:hover,
+  .page-2-item-link:hover  {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+
+  .page-2-item-link:hover .page-2-item-bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+
+
+  .page-2-item-title {
+    overflow: hidden;
+    color: #FFF; 
+    z-index: 2;
+    position: relative;
+  }
+
+
+.page-2-item-title .card-title{
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+
+  .page-2-item-title p{
+    font-size: 12px;
+  }  
+
+  .page-2-item-bg {
+    height: 128px;
+    width: 128px;
+    background-color: #234E52;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px; 
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;   
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    font-size: 4vw;
+    display: inline-block;
+}
+
+#gola {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #345c5f;
+    margin: 0vw 2vw;
+    
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom {
+    margin-top: 110px;
+    margin-left: 20px;
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+}
+
+
+#page2 #gooey {
+    height: 12vw;
+    width: 12vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #345c5f, #498185);   
+    top: 250%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+.bottom-part2-container {
+    width: 550px;
+    height: 340px;
+    perspective: 800px;
+    margin-left: 30px;
+  }
+  
+  .bottom-part2-container:hover > .bottom-part2-card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .bottom-part2-card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+
+  
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-image: url('https://www.goodtherapy.org/blog/blog/wp-content/uploads/2012/01/woman-talking-with-therapist2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    transform-style: preserve-3d;
+  }
+
+  .front img{
+   object-fit: cover;
+   border-radius: 2rem;
+  }
+
+  .front button{
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    color: black;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+.front p{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
+
+.back {
+    background-image: url('https://www.goodtherapy.org/blog/blog/wp-content/uploads/2012/01/woman-talking-with-therapist2.jpg');
+    background-color: #3a3a3a;
+    color: black;
+    transform: rotateY(180deg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100%; 
+    width: 100%;
+    gap: 5rem;
+
+  }
+
+  .back button{
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    color: black;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+.back p{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.bottom-part2-img{
+    display: none;
+}
+
+
+.part2-img-card {
+    background-image: url('https://www.goodtherapy.org/blog/blog/wp-content/uploads/2012/01/woman-talking-with-therapist2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+
+}
+
+.part2-img-card button{
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    color: black;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+
+.part2-img-card p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+
+#page4 {
+    height: 110vh;
+    width: 100%;
+    padding: 10vw 2vw;
+    
+}
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #7c7070cb;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+    margin-left: 80px;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #49898d;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem .overlay h2{
+    color: #fff;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+
+#loader {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 200vh;
+    width: 100%;
+    background-color: #E6F2F0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; 
+    
+  } 
+
+#loader h1 {
+    font-size: 4vw;
+    color: #234E52;
+    text-shadow: 2px 2px 4px #3897a0;
+    opacity: 0;
+    animation: fadeIn 0.7s forwards; 
+    /* margin-top: 50%; */
+}
+
+#loader h1:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #234E52; 
+    box-shadow: 2px 2px 4px #3897a0;
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    animation: spin 2s linear infinite;
+    margin-top: 40%;
+    margin-bottom: 20px; 
+    
+  }
+
+@keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media(max-width:1280px){
+    .page-2-item{
+        margin-top: 20px;
+    }
+
+    #right h1{
+       font-size: 85px;
+    }
+
+}
+
+
+@media(max-width:950px){
+    #center{
+        display: flex;         
+        flex-wrap: wrap;     
+        justify-content: space-around;
+    }
+
+    #left button{
+        margin-left: -150px;
+    }
+
+    #right h2{
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    #right h1{
+        margin-top: -20px;
+    }
+
+    .mental-wealth-container{
+        display: flex;         
+        flex-wrap: wrap;     
+        justify-content: space-around;
+        margin-top: 350px;
+        width: 90%;
+    }
+
+    #gola {
+        height: 20px;
+        width: 20px;
+    }
+
+    #page2-bottom {
+        display: flex;         
+        flex-wrap: wrap;     
+        justify-content: space-around;
+    }
+
+    .page-2-item{
+        margin-top: 20px;
+    }
+
+    .bottom-part2{
+        display: none;
+    }
+
+    .bottom-part2-img{
+        display: block;
+    }
+
+    .elem {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+@media(max-width:600px){
+    .mental-wealth-container{
+        display: flex;         
+        flex-wrap: wrap;     
+        justify-content: space-around;
+        margin-top: 200px;
+        width: 90%;
+    }
+
+    #right h2{
+        margin-top: 40px;
+    }
+
+    #right h1{        
+        font-size: 40px;
+    }
+
+    #left button{
+        margin-left: -250px;
+    }
+    
+    #loader h1 {
+        font-size: 8vw;
+       
+    }
+    .spinner {
+     margin-top: 90%;        
+    }
+
+}
+
+
+@media(max-width:440px){
+    .mental-wealth-container{
+        display: flex;         
+        flex-wrap: wrap;     
+        justify-content: space-around;
+        margin-top: 120px;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+   
+
+}
+
+
+
+
+

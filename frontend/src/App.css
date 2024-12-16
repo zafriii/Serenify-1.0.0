@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;   
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background:  #E6F2F0;
+}
+
+
+@media(max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+}
+
+/* Dark Green - #234E52
+Light Mint Green - #E6F2F0
+White - #FFFFFF
+Black / Dark Gray (Text) - #333333
+Light Gray - #F5F5F5 */

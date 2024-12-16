@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.quote-generator {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+    /* background-image: url('https://thumbs.dreamstime.com/z/therapy-session-cartoon-style-vector-patient-talking-to-psychologist-colorful-vector-image-woman-lying-couch-176163697.jpg?h=800'); */
+    background-image: url('/images/quotebg_enhanced.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navlogo img {
+    height: 70px;    
+    margin-left: 10px;   
+}
+
+.navlinks{
+    margin-right: 20px;
+}
+
+.navlinks button{
+    background-color: #234E52;
+    color: aliceblue;
+}
+
+.quote-generator h1{
+    margin-top: 30px;
+}
+
+.quote-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow:0 4px 20px  #234E52;
+    width: 90%;
+    max-width: 500px;
+    height: 480px;
+    padding: 20px;
+    margin-top: 3%;
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px #5b959b;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.quote-generator .username{
+    color: #234E52;
+}
+
+.quote-generator .greeting{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.quote-generator .quote-text{
+    margin-top: 20px;
+    color: rgb(2, 1, 1);
+}
+
+.quote-generator .with{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.quote-generator .quote-span{
+    color: #234E52;
+    font-weight: 700;
+}
+
+.quote {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.quote-container  h1 {
+    margin-top: 80px;
+}
+
+.quote-container  h2 {
+    margin-top: 100px;
+}
+
+.quote-container  p {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000fd; 
+    margin-left: 10px;
+    margin-top: 20px;
+    position: relative;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    z-index: 1; 
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #234E52;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: 0; 
+}
+
+.button:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.button:hover {
+    color: white; 
+    box-shadow: 0 0 5px #467c81, 0 0 10px #467c81, 0 0 20px #234E52;
+    
+}
+
+.button span {
+    position: relative; 
+    z-index: 1; 
+    transition: color ease 0.4s; 
+}
+
+@media (max-width: 600px) {
+
+    .quote-generator p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .quote {
+        font-size: 20px;
+    }
+
+    .navlinks .button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+

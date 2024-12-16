@@ -1,0 +1,221 @@
+.appointment-form-section {
+    width: 500px;
+    /* margin: 0 auto; */ 
+    margin-top: 20px;  
+    padding: 20px;
+    margin-left: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form-section h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.appointment-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form-section label {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    display: block;
+}
+
+.appointment-form-section label input[type="text"],
+.appointment-form-section label input[type="number"],
+.appointment-form-section label input[type="email"],
+.appointment-form-section label input[type="date"],
+.appointment-form-section label input[type="radio"] {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.appointment-form-section input[type="text"],
+.appointment-form-section input[type="number"],
+.appointment-form-section input[type="email"],
+.appointment-form-section input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border: 1px solid #234E52;
+    /* border-top:1px solid #ffffff; */
+      
+    border-radius: 34px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.appointment-form-section input[type="radio"] {
+    margin-left: 5px;
+}
+
+.appointment-form-section button[type="submit"] {
+    background-color: #234E52;
+    color: white;
+    border-radius: 100px;    
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.appointment-form-section button[type="submit"]:hover {
+    background-color: #467c81;
+}
+
+.discount-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f9ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 4px;
+    color: #333;
+    text-align: center;
+}
+
+.discount-message p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+.appoint-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+
+.appoint-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+.appoint-modal-content h4 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
+.appoint-modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appoint-modal-content li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.appoint-modal-content li strong {
+    color: #555;
+}
+
+.appoint-modal-content div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.appoint-modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.appoint-modal-content button:hover {
+    background-color: #ddd;
+}
+
+.appoint-modal-content button:active {
+    background-color: #bbb;
+}
+
+.appoint-modal-content button:first-child {
+   background-color: #234E52;
+    color: white;
+}
+
+.appoint-modal-content button:first-child:hover{
+    background-color: #2e6e6e;
+}
+
+.appoint-modal-content button:last-child {
+    /* background-color: gray; 
+    color: white; */
+    color: #555;
+}
+
+.appoint-modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appoint-country, .location-error, .load-location{
+    margin-left: 50px;
+}
+
+@media(max-width:1050px){
+    .appointment-form-section{
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .appoint-country{
+        margin-top: 30px;
+    }
+}
+
+
+@media(max-width:600px){
+    .appointment-form-section{
+        width: 90%;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .appoint-modal-content{
+        width: 80%;
+    }
+
+    .appoint-country h2{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+}

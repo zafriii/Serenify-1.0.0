@@ -1,0 +1,132 @@
+.doc-herosec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.doc-herosec h2{
+    font-size: 30px;
+    color: #234E52;
+}
+
+.doc-herosec p{
+    margin-top: 20px;
+}
+
+
+.doc-herosec img{
+    height: 300px;
+    width: 400px;
+    margin-left: 40px;
+}
+
+.doc-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    padding: 40px 10px;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+
+}
+
+.doc-part p{
+    font-size: 15px;
+}
+
+.doc-card{
+    margin-left: 30px;
+}
+
+.doc-work{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.we-care-card{
+    margin-top: 20px;
+}
+
+.how-works{
+    border-left: 4px solid gainsboro;    
+}
+
+.how-works h2{
+    margin-left: 20px;
+}
+
+.how-works-card{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* .doc-herosec, .doc-part, .doc-work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+
+@media(max-width:900px){
+    .doc-herosec,  .doc-work{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .doc-herosec img{
+        margin-top: 20px;
+    }
+
+    .how-works{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:600px){
+    .doc-herosec, .doc-part,  .doc-work{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .doc-herosec h2, .doc-herosec p{
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+
+    .doc-herosec img{
+        margin-left: 10px;
+        width: 350px;
+    }
+
+    .doc-part{
+        margin-left: 30px;
+        width: 80%;
+    }
+
+    .doc-card{
+        margin-left: 10px;
+    }
+
+    .we-care{
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .how-works{
+        margin-left: 50px;
+        margin-right: 150px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,172 @@
+.yoga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.yoga p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.yoga-poses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.yoga-poses img{
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.yoga-tool{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.yoga-exercise{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .exercise-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+   */
+
+   .difficulty-buttons button{
+    background-color: #234E52;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+  }
+
+  .difficulty-buttons button:hover{
+    transform: scale(1.1);
+  }
+
+  
+
+   .exercise-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .exercise-buttons button {
+    padding: 10px 15px;
+    background-color: #234E52;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .exercise-buttons button:hover {
+    background-color: #2b5f64;
+  }
+  
+
+  .meditation-widget {
+    width: 250px;
+    background-color: #c7dddf; 
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .meditation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .meditation-date {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .meditation-icon {
+    font-size: 16px;
+  }
+  
+  .meditation-content {
+    margin-top: 10px;
+  }
+  
+  .meditation-day {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .meditation-time {
+    font-size: 20px;
+    color: #666;
+  }
+
+  .meditation-time span{
+    font-size: 16px;
+  }
+  
+  .meditation-title {
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+  @media(max-width:950px){
+    .yoga p{
+      font-size: 18px;
+    }
+
+    .yoga-poses{
+      display: flex;         
+      flex-wrap: wrap;     
+      justify-content: space-around;
+    }
+
+    .yoga-exercise{
+      display: flex;         
+      flex-wrap: wrap;     
+      justify-content: space-around;
+    }
+
+    .meditation-widget{
+      margin-top: 20px;
+    }
+
+    .yoga-tool h2{
+      font-size: 18px;
+    }
+  }

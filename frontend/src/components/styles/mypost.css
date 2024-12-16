@@ -1,0 +1,57 @@
+.my-posts {
+    overflow-y: auto; 
+    padding-right: 10px; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent;
+    margin-top: 140px;
+    max-height: 500px;
+  }
+  
+  .my-posts::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .my-posts::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
+  .my-posts::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .links-reacts{
+    display: flex;
+  }
+
+  .react{
+    margin-top: 22px;
+    margin-left: 5px;
+  }
+
+ 
+  .link-react-cmnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media(max-width:600px){
+
+    .my-posts{
+      max-width: 340px;
+      margin-left: -10px;
+    }
+    
+    .my-posts .share {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+
+
+    .my-posts textarea, .my-posts input {
+      width: 90%;
+    }
+
+
+  }

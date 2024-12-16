@@ -1,0 +1,64 @@
+.timer-controls button{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #009E60; */
+    background-color: #023a3f; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.display-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.meditation-timer .display{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-top:50px ;
+    margin-left: 25px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #009E60; */
+    background-color: #12575e; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.meditation-timer p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.timer-controls button:hover{
+    background-color: #12575e;
+}
+
+.meditation-timer .display:hover{
+    background-color: #12575e;
+}
+
+.time-display{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #12575e;
+    font-size: 20px;
+}

@@ -1,0 +1,165 @@
+.looking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+
+.tips-container {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f8ff, #dfefff);
+  min-height: 100vh;
+}
+
+
+.search-box {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #007bff;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  box-shadow: inset 0 1px 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-box svg {
+  margin-left: 15px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+
+.tips-list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+
+.tip-item {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tip-item li{
+  margin-left: 20px;
+}
+
+.tip-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tip-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tip-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.tip-text:hover {
+  color: #007bff;
+}
+
+.community-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.community-link:hover {
+  text-decoration: underline;
+}
+
+
+.no-rslts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .tips-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tip-title {
+    font-size: 20px;
+  }
+
+  .tip-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+
+  .search-box input {
+    margin-bottom: 15px;
+  }
+
+  .tips-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-title {
+    font-size: 18px;
+  }
+
+  .tip-text {
+    font-size: 14px;
+  }
+}

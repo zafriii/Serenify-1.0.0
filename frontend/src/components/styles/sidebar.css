@@ -1,0 +1,73 @@
+.sidebar {
+    background-color: #f9f9f9;
+    color: black;
+    height:400px ;
+    margin-top: 50px;
+    overflow-y: auto;
+    transition: width 0.1s;
+    background-color: #8ec3c7;;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+   }
+
+.top_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.logo {
+    font-size: 18px;
+    line-height: 0;
+}
+
+.bars {
+    width: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.top_section p {
+    color: black;
+    
+}
+
+
+.booking-link{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.booking-link .book-icon{
+    margin-left: 10px;
+}
+
+.booking-link a{
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+    
+}
+
+.booking-link a:hover{
+    color: gray;
+    text-decoration: none;
+    
+}
+
+
+/* @media(max-width:600px){
+    .sidebar{
+        position: relative;
+        z-index: 10;
+    }
+} */
