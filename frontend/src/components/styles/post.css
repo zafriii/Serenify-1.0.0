@@ -345,6 +345,112 @@
   font-weight: 500;
 }
 
+
+
+.post-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.post-modal-content {
+  background-color: #f3ecec;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  margin-left: 20px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  background-color: #777;
+  border-radius: 50%;
+}
+
+/* Textarea Styling */
+.post-modal-content textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.post-modal-content textarea:focus {
+  border-color: #0a2f41;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.post-modal-content button[type="submit"] {
+  background-color: #0a2f41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.post-modal-content button[type="submit"]:hover {
+  background-color: #1b3e4e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.open-modal-btn {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
   .sort-select {
     flex-direction: column;
@@ -365,9 +471,11 @@
 .sort-select select{
   margin-left: -20px;
 }
+.post-modal-content{
+    width: 90%;
+}
   
 }
-
 
 @media(max-width:440px){
 
