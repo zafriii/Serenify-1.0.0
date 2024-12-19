@@ -42,25 +42,23 @@ export const Spritualmotivationsdata = {
         english: "Indeed, the patient will be given their reward without account.",
         source: "Surah Az-Zumar [39:10]"
       },
-      // Add more verses to complete the 30 total
+      
     ],
     Hindu: [
       "The mind is restless and difficult to restrain, but it is subdued by practice - Bhagavad Gita.",
       "Do not be sad or grieve, for the soul is eternal and indestructible - Bhagavad Gita.",
       "When meditation is mastered, the mind is unwavering like the flame of a lamp in a windless place - Bhagavad Gita.",
-      // Add more verses (30 total)
+      
     ],
     Christian: [
       "The Lord is close to the brokenhearted and saves those who are crushed in spirit - Psalm 34:18.",
       "Cast all your anxiety on Him because He cares for you - 1 Peter 5:7.",
       "He heals the brokenhearted and binds up their wounds - Psalm 147:3.",
-      // Add more verses (30 total)
     ],
     Buddha: [
       "Pain is inevitable. Suffering is optional - Buddha.",
       "The mind is everything. What you think you become - Buddha.",
       "You only lose what you cling to - Buddha.",
-      // Add more verses (30 total)
     ]
   };
   
