@@ -15,13 +15,8 @@ const replyreactiontRouter = require('./router/rplyreactionRouter');
 const feedbackRouter = require('./router/feedbackRouter');
 const errorMiddleware = require("./middlewares/error-middleware");
 const socketHandler = require('./socketHandler'); // Import your socket handler
-
-
-
 const notificationRouter = require('./router/notificationRouter');
-
 const alertRouter = require('./router/alertRouter');
-
 const appointmentRouter = require('./router/appointmentRouter');
 const moodRouter = require('./router/moodRouter');
 
@@ -41,7 +36,6 @@ const io = new Server(server, {
 
 // Use the socketHandler for handling socket.io events
 socketHandler(io); // Pass the Socket.io instance to the handler
-
 
 
 // Middleware for CORS
@@ -66,13 +60,9 @@ app.use('/api/reactions', reactiontRouter);
 app.use('/api/cmntreactions', cmntreactiontRouter);
 app.use('/api/replyreactions', replyreactiontRouter);
 app.use('/api/feedback', feedbackRouter);
-
 app.use('/api/notifications', notificationRouter);
-
 app.use('/api/alerts', alertRouter);
-
 app.use('/api/appointments', appointmentRouter);
-
 app.use('/api/moods',moodRouter );
 
 // Middleware for handling errors
