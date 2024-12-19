@@ -72,10 +72,6 @@ const hotlines = [
 ];
 
 
-
-
-
-
 const Resources = () => {
 
   useEffect(() => {       
@@ -107,29 +103,6 @@ const Resources = () => {
           </div>
         ))}
       </div>
-
-
-
-        {/* <div className="hotlines-footer">
-        <h2>Need Professional Help?</h2>
-        <p>Here are some professional resources and hotlines available for urgent mental health support:</p>
-        <ul>
-            <li>
-            <strong>National Suicide Prevention Lifeline:</strong> 
-            <a href="tel:+1-800-273-8255">1-800-273-8255</a> (Or dial <strong>988</strong>)
-            </li>
-            <li>
-            <strong>Therapy Referral Service:</strong> 
-            <a href="https://www.psychologytoday.com/us/therapists" target="_blank" rel="noopener noreferrer">Find a Therapist</a>
-            </li>
-            <li>
-            <strong>Local Mental Health Services:</strong> 
-            <a href="https://www.nami.org/Home" target="_blank" rel="noopener noreferrer">Check local services (NAMI)</a>
-            </li>
-        </ul>
-        </div> */}
-
-
 
       <div className="hotlines-footer">
         <h2>Need Professional Help?</h2>
