@@ -16,7 +16,6 @@ function Tips() {
    <Tipsec/>
    <GuidesForYourMind/>      
    <Slider/>
-   {/* <Feedback/> */}
    <Footer/>
 
    </>
