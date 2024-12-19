@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Post from './Post'; 
 import { GiNothingToSay } from "react-icons/gi";
 import Showmsg from './Showmsg';  
+import { FaThList, FaThLarge } from 'react-icons/fa'; // Icons for view toggle
 
 function Userpost() {
   const [posts, setPosts] = useState([]);
@@ -20,7 +21,9 @@ function Userpost() {
   const { user, isLoggedin } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [activePostOptions, setActivePostOptions] = useState(null);
-  const [showmsg, setShowmsg] = useState({ message: "", type: "" }); 
+  const [showmsg, setShowmsg] = useState({ message: "", type: "" });
+  const [viewMode, setViewMode] = useState('list'); // New state for view mode
+  const [sortOption, setSortOption] = useState('newest'); // State for sorting
 
   // Fetching Posts
   useEffect(() => {
@@ -38,6 +41,31 @@ function Userpost() {
 
   const handleContentChange = (event) => {
     setPostContent(event.target.value);
+  };
+
+  const handleViewModeChange = (mode) => {
+    setViewMode(mode);
+  };
+
+  const handleSortChange = (event) => {
+    setSortOption(event.target.value);
+  };
+
+  const sortPosts = (posts) => {
+    const now = new Date();
+    const last7Days = new Date();
+    last7Days.setDate(now.getDate() - 7);
+
+    if (sortOption === 'newest') {
+      return [...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    }
+    if (sortOption === 'oldest') {
+      return [...posts].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    }
+    if (sortOption === 'last7days') {
+      return posts.filter((post) => new Date(post.createdAt) >= last7Days);
+    }
+    return posts;
   };
 
   // Create & Edit posts
@@ -74,7 +102,6 @@ function Userpost() {
         setPosts(updatedPosts);
         setEditMode(false);
         setEditId(null);
-        // Show success message
         setShowmsg({ message: "Post updated successfully!", type: "success" });
       } catch (error) {
         console.error('Error updating post:', error);
@@ -90,7 +117,6 @@ function Userpost() {
             },
           });
           fetchPosts();
-          // Show success message
           setShowmsg({ message: "Post created successfully!", type: "success" });
         } catch (error) {
           console.error('Error creating post:', error);
@@ -101,7 +127,6 @@ function Userpost() {
     setPostContent('');
   };
 
-  // Delete posts with confirmation
   const requestDeletePost = (id) => {
     setDeleteId(id);
     setShowConfirmModal(true);
@@ -128,21 +153,19 @@ function Userpost() {
     setShowConfirmModal(false);
   };
 
-  // Posts after update
   const editPost = (id, content) => {
     setEditMode(true);
     setEditId(id);
     setPostContent(content);
   };
 
-  // Search Posts
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value.toLowerCase());
   };
 
-  const filteredPosts = posts.filter((post) =>
+  const filteredPosts = sortPosts(posts.filter((post) =>
     post.content.toLowerCase().includes(searchQuery)
-  );
+  ));
 
   const toggleOptions = (postId) => {
     setActivePostOptions((prev) => (prev === postId ? null : postId));
@@ -153,7 +176,6 @@ function Userpost() {
       <Navbar />
       <div className='posts'>
         
-        {/* Showmsg Component */}
         <Showmsg 
           message={showmsg.message} 
           type={showmsg.type} 
@@ -197,22 +219,50 @@ function Userpost() {
             onChange={handleSearchChange}
           />
 
-          {filteredPosts.length > 0 ? (
-            filteredPosts.map((post) => (
-              <Post
-                key={post._id}
-                post={post}
-                activePostOptions={activePostOptions}
-                toggleOptions={toggleOptions}
-                editPost={editPost}
-                requestDeletePost={requestDeletePost}
-                user={user}
-                isLoggedin={isLoggedin}
-              />
-            ))
-          ) : (
-            <p>No posts found</p>
-          )}
+          <div className="view-toggle">
+            <button onClick={() => handleViewModeChange('list')} className={viewMode === 'list' ? 'active' : ''}>
+              <FaThList /> List View
+            </button>
+            <button onClick={() => handleViewModeChange('grid')} className={viewMode === 'grid' ? 'active' : ''}>
+              <FaThLarge /> Grid View
+            </button>
+
+            <div className="sort-select">
+            <select value={sortOption} onChange={handleSortChange}>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="last7days">Posts from Last 7 Days</option>
+            </select>
+          </div>
+
+          </div>
+
+          {/* <div className="sort-select">
+            <select value={sortOption} onChange={handleSortChange}>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="last7days">Posts from Last 7 Days</option>
+            </select>
+          </div> */}
+
+          <div className={`posts-display ${viewMode}`}>
+            {filteredPosts.length > 0 ? (
+              filteredPosts.map((post) => (
+                <Post
+                  key={post._id}
+                  post={post}
+                  activePostOptions={activePostOptions}
+                  toggleOptions={toggleOptions}
+                  editPost={editPost}
+                  requestDeletePost={requestDeletePost}
+                  user={user}
+                  isLoggedin={isLoggedin}
+                />
+              ))
+            ) : (
+              <p>No posts found</p>
+            )}
+          </div>
         </div>
 
         <ConfirmModal
