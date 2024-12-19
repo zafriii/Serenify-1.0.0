@@ -33,15 +33,6 @@ function Herosec() {
   return (
     <div id="main">
       {loading ? <Loader /> : null}
-      {/* <Navbar/>
-      <Part1/>
-      <Part2/>
-      <Cards/>
-      <Part3/>
-      <CardSlide/>
-      <Part4/>
-      <Carousel/>
-      <Footer/> */}
       <Navbar/>
       <Part1/>
       <Part2/>
@@ -254,8 +245,6 @@ const Part3 = () => (
     </div>
   );
 
-
-  
 
 
   export default Herosec;
