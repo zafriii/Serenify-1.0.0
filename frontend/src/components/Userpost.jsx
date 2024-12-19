@@ -24,6 +24,8 @@ function Userpost() {
   const [showmsg, setShowmsg] = useState({ message: "", type: "" });
   const [viewMode, setViewMode] = useState('list'); // New state for view mode
   const [sortOption, setSortOption] = useState('newest'); // State for sorting
+  const [showModal, setShowModal] = useState(false); // State for modal visibility
+  const [isLoading, setIsLoading] = useState(false);
 
   // Fetching Posts
   useEffect(() => {
@@ -68,7 +70,6 @@ function Userpost() {
     return posts;
   };
 
-  // Create & Edit posts
   const handlePostSubmit = async (event) => {
     event.preventDefault();
     if (!isLoggedin) {
@@ -81,6 +82,7 @@ function Userpost() {
     }
 
     const token = localStorage.getItem('token');
+    setIsLoading(true);
 
     if (editMode && editId !== null) {
       try {
@@ -123,8 +125,9 @@ function Userpost() {
         }
       }
     }
-
+    setIsLoading(false);
     setPostContent('');
+    setShowModal(false); // Close the modal after submitting
   };
 
   const requestDeletePost = (id) => {
@@ -153,10 +156,18 @@ function Userpost() {
     setShowConfirmModal(false);
   };
 
-  const editPost = (id, content) => {
-    setEditMode(true);
+  const openModal = (content = '', id = null) => {
+    setEditMode(!!id);
     setEditId(id);
     setPostContent(content);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setPostContent('');
+    setEditMode(false);
+    setEditId(null);
   };
 
   const handleSearchChange = (event) => {
@@ -175,7 +186,6 @@ function Userpost() {
     <>
       <Navbar />
       <div className='posts'>
-        
         <Showmsg 
           message={showmsg.message} 
           type={showmsg.type} 
@@ -186,28 +196,39 @@ function Userpost() {
           <span className="post__row">
             <span className="post__text">What's on your mind? </span>
           </span>
-          <GiNothingToSay />
+          
         </p>
 
         <p className='share'>Share your feelings & problems with people to get suggestions in tough times. All the posts will be anonymous</p>
 
-        <div className='post-area'>
-          <form onSubmit={handlePostSubmit}>
-            <textarea
-              value={postContent}
-              onChange={handleContentChange}
-              placeholder={isLoggedin ? `Share your feelings, ${user.username}...` : "Share your feelings..."} 
-              required
-            />
-            {isLoggedin ? (
-              <button className='submit' type='submit'>{editMode ? 'Save' : 'Share Post'}</button>
-            ) : (
-              <button className='redirect' onClick={() => { window.location.href = '/login'; }}>
-                Share Post
-              </button>
-            )}
-          </form>
-        </div>
+  
+        <textarea 
+          className="open-modal-btn" 
+          onClick={() => openModal()}
+          placeholder={isLoggedin ? `Share your feelings, ${user.username}...` : "Share your feelings..."}
+          readOnly
+        />
+
+        {showModal && (
+          <div className="post-modal">
+            <div className="post-modal-content">
+              <button className="close-modal-btn" onClick={closeModal}>x</button>
+              <form onSubmit={handlePostSubmit}>
+              {isLoggedin ? ` ${user.username}'s post` : ""}
+                <textarea
+                  value={postContent}
+                  onChange={handleContentChange}
+                  placeholder="Share your feelings..."
+                  required
+                />
+                {/* <button type="submit">{editMode ? 'Save Changes' : 'Share Post'}</button> */}
+                <button type="submit" disabled={isLoading}>
+                  {isLoading ? 'Posting...' : editMode ? 'Save Changes' : 'Share Post'}
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
 
         <div className='newpost-container'>
           <p>Posts made by People</p>
@@ -228,13 +249,12 @@ function Userpost() {
             </button>
 
             <div className="sort-select">
-            <select value={sortOption} onChange={handleSortChange}>
-              <option value="newest">Newest</option>
-              <option value="oldest">Oldest</option>
-              <option value="last7days">Posts from Last 7 Days</option>
-            </select>
-          </div>
-
+              <select value={sortOption} onChange={handleSortChange}>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="last7days">Posts from Last 7 Days</option>
+              </select>
+            </div>
           </div>
 
           <div className={`posts-display ${viewMode}`}>
@@ -245,7 +265,7 @@ function Userpost() {
                   post={post}
                   activePostOptions={activePostOptions}
                   toggleOptions={toggleOptions}
-                  editPost={editPost}
+                  editPost={(id, content) => openModal(content, id)}
                   requestDeletePost={requestDeletePost}
                   user={user}
                   isLoggedin={isLoggedin}
@@ -264,7 +284,6 @@ function Userpost() {
           onCancel={cancelDeletePost}
         />
       </div>
-
       <Footer />
     </>
   );
