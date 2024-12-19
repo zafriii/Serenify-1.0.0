@@ -237,14 +237,6 @@ function Userpost() {
 
           </div>
 
-          {/* <div className="sort-select">
-            <select value={sortOption} onChange={handleSortChange}>
-              <option value="newest">Newest</option>
-              <option value="oldest">Oldest</option>
-              <option value="last7days">Posts from Last 7 Days</option>
-            </select>
-          </div> */}
-
           <div className={`posts-display ${viewMode}`}>
             {filteredPosts.length > 0 ? (
               filteredPosts.map((post) => (
