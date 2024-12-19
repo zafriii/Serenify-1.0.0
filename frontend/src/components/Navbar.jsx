@@ -62,14 +62,7 @@ function Navbar() {
             <button className="button" onClick={toggleMenu}>
               <span>Posts</span>
             </button>
-          </NavLink>
-
-          
-
-
-          {/* <TranslateComponent/> */}
-
-          
+          </NavLink>          
 
       {isLoggedin ? (
 
