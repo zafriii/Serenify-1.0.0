@@ -13,7 +13,7 @@ const appointmentSchema = new mongoose.Schema({
     gender: {
         type: String,
         required: true,
-        enum: ['Male', 'Female', 'Other'], // Limit gender options
+        enum: ['Male', 'Female', 'Other'], 
     },
     email: {
         type: String,
@@ -38,7 +38,7 @@ const appointmentSchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Schema.Types.ObjectId, // Reference to the user who booked the appointment
-        ref: 'User', // Assumes you have a User model
+        ref: 'User', 
         required: true, // Ensure that the appointment is linked to a user
     },
     date: {
