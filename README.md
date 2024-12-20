@@ -53,7 +53,7 @@ A comprehensive web application designed to support mental well-being by offerin
   - Students receive categorized discounts.
   - Standard pricing applies to non-students.
 - **Duplicate Booking Prevention**: No multiple appointments on the same date.
-- **Therapist Daily Limit**: Max 5 patients per day; excess bookings auto-scheduled.
+- **Therapist Daily Limit**: Max 5 patients per day; excess bookings auto-scheduled for the next day.
 - **Email Confirmation**: Booking details sent via email.
 - **Feedback System**: Rate and review your experience with therapists.
 - **Booking Alerts**: Notifications with therapist names and appointment details.
