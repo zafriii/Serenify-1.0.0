@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './styles/navbar.css';
 import NotificationBell from './NotificationBel';
 import { useAuth } from '../store/Auth';
-import TranslateComponent from './TranslateComponent';
-
 
 
 function Navbar() {
