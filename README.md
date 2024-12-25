@@ -300,7 +300,7 @@ git clone https://github.com/yourusername/Serenify-Version-1.0.0.git
 
 ## Deployment
 
-- **Backend**: The backend of the application is deployed on [Render](https://render.com/) and can be accessed at `https://serenify-backend.onrender.com`.
+- **Backend**: The backend of the application is deployed on [Render](https://render.com/) and can be accessed at `https://serenify-backend.onrender.com`. Backend might take some time (15/20 secs) to start.
 It is automatically deployed through GitHub integration on every push to the `main` branch.
 - **Frontend**: The frontend is hosted on [Netlify](https://www.netlify.com/) and is available at `https://serenifymentalwellness.netlify.app`.
 
