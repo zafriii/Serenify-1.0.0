@@ -210,7 +210,9 @@ The **Mental Health Wellness Platform** follows a multi-layered client-server ar
   - AI Chatbot with Gemini API  
   - Mood Tracker with Charts  
   - Breathing Meditation Tool and Emotion Detector  
-  - Secure Notes for private data  
+  - Secure Notes for private data
+  - Anonymous posting
+  - Booking appointments  
 
 ---
 
