@@ -268,15 +268,19 @@ Before setting up the project, make sure you have the following installed on you
 ### Clone the repository
 git clone https://github.com/yourusername/Serenify-Version-1.0.0.git
 
-### Commands for frontend-
--cd frontend
--npm install
--npm run dev
+1. **Frontend Setup**:
+   - cd frontend
+   - Install dependencies: `npm install`  
+   - Start development server: `npm run dev`  
 
-### Commands for backend-
--cd server
--npm install
--npm run start
+2. **Backend Setup**:
+   - cd backend - cd server
+   - Install dependencies: `npm install`  
+   - Start server: `npm run start`  
+
+3. **Database Setup**:  
+   - Use MongoDB Atlas or local MongoDB instance.  
+   - Configure connection in `utils/db.js`.  
 
 
 ## Deployment
