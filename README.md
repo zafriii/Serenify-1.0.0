@@ -297,14 +297,14 @@ Before setting up the project, make sure you have the following installed on you
 git clone https://github.com/yourusername/Serenify-Version-1.0.0.git
 
 # Commands for frontend-
-cd frontend
-npm install
-npm run dev
+-cd frontend
+-npm install
+-npm run dev
 
 # Commands for backend-
-cd server
-npm install
-npm run start
+-cd server
+-npm install
+-npm run start
 
 
 ## Deployment
