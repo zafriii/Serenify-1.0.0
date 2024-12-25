@@ -291,17 +291,17 @@ Before setting up the project, make sure you have the following installed on you
 - **MongoDB** - [Install MongoDB](https://www.mongodb.com/try/download/community) or use MongoDB Atlas
 - **Git** - [Install Git](https://git-scm.com/)
 
-### **Step 1: Clone the Repository**
+# **Step 1: Clone the Repository**
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/yourusername/Serenify-Version-1.0.0.git
 
-# Commands for frontend-
+### Commands for frontend-
 -cd frontend
 -npm install
 -npm run dev
 
-# Commands for backend-
+### Commands for backend-
 -cd server
 -npm install
 -npm run start
